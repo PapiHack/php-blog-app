@@ -13,28 +13,27 @@
 	<!-- Stylesheets -->
 
 	<link href="<?= asset('common-css/bootstrap.css') ?>" rel="stylesheet">
-
 	<link href="<?= asset('common-css/ionicons.css') ?>" rel="stylesheet">
-
-
 	<link href="<?= asset('blog-sidebar/css/styles.css') ?>" rel="stylesheet">
-
 	<link href="<?= asset('blog-sidebar/css/responsive.css') ?>" rel="stylesheet">
 </head>
 <body>
 
     <?php require_once('shared/header.php'); ?>
+
+    <div class="slider display-table center-text">
+		<h1 class="title display-table-cell"><b></b></h1>
+	</div><!-- slider -->
     
     <?= $content ?>
+
+    <?php require_once('shared/footer.php'); ?>
 
     <!-- SCRIPTS -->
 
 	<script src="<?= asset('common-js/jquery-3.1.1.min.js') ?>"></script>
-
     <script src="<?= asset('common-js/tether.min.js') ?>"></script>
-
     <script src="<?= asset('common-js/bootstrap.js') ?>"></script>
-
     <script src="<?= asset('common-js/scripts.js') ?>"></script>
 </body>
 </html>

@@ -1,10 +1,7 @@
-<?php $title = 'Test'; ?>
+<?php
 
-<?php ob_start(); ?>
+require_once('../src/ViewLoader/View.php');
 
-<h1>Mon super blog</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, accusamus.</p>
+$view = new View();
 
-<?php $content = ob_get_clean(); ?>
-
-<?php require('../templates/layout.php');?>
+$view->index();
