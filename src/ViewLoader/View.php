@@ -134,4 +134,10 @@ class View
             }
         }
     }
+    
+    public function articlesByCategory()
+    {
+        $this->allArticles = $this->articleManager->getByCategory($_GET['category']);
+        require_once('../templates/blog/index.php');
+    }
 }

@@ -23,7 +23,7 @@
     <?php require_once('shared/header.php'); ?>
 
     <div class="slider display-table center-text">
-		<h1 class="title display-table-cell"><b></b></h1>
+		<h1 class="title display-table-cell"><b>Ethical H4cking & Python Lovers</b></h1>
 	</div><!-- slider -->
     
     <?= $content ?>

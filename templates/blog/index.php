@@ -11,7 +11,13 @@ require_once('../src/core/helpers/resourceLoader.php');
 
 				<div class="col-lg-8 col-md-12">
 					<div class="row">
-						<?php foreach($this->allArticles as $article) { 
+					<?php if(count($this->allArticles) == 0){ ?>
+
+						<h1>Aucun article trouvé. Veuillez en <a href="">ajouter</a> !</h1>
+
+						<?php } else { ?>
+								
+							<?php foreach($this->allArticles as $article) { 
 							
 							if($article->getImage()) {
 							
@@ -84,9 +90,12 @@ require_once('../src/core/helpers/resourceLoader.php');
 						}
 						?>
 
+						<?php }?>
+
 					</div><!-- row -->
 
-					<a class="load-more-btn" href="#"><b>LOAD MORE</b></a>
+					<?php if(count($this->allArticles) > 0) { ?>
+					<a class="load-more-btn" href="#"><b>PLUS D'ARTICLES</b></a> <?php } ?>
 
 				</div><!-- col-lg-8 col-md-12 -->
 

@@ -25,8 +25,12 @@ if(isset($_GET['action'])){
                             break;
         case 'storeCategory': $view->storeCategory();
                                 break;
-        case 'storeArticle': $view->storeArticle();
+        case 'storeArticle' : $view->storeArticle();
                                 break;
+        case 'articlesByCategory' : if(isset($_GET['category'])){
+                                        $view->articlesByCategory();
+                                        break;
+                                        }
     }
 }
 

@@ -91,6 +91,7 @@ class ArticleManager
     public function getByCategory($category)
     {
         $articles = array();
+        $category = (int) $category;
 
         $request = $this->db->prepare('SELECT * FROM article WHERE categorie = :categorie');
         $request->execute(['categorie'=>$category]);

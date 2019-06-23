@@ -4,9 +4,11 @@
 
         <div class="about-area">
             <h4 class="title"><b>A Propos du <code>blog du hacker</code></b></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-                Ut enim ad minim veniam</p>
+            <p>Petit blog créé par un jeune passionné de programmation, de developpement et de 
+             sécurité informatique en particulier le <code>Ethical Hacking</code>.
+             Nous partegerons avec vous des sujets qui parlent essentiellement de sécurité : 
+             techniques, exploits, tuto, etc.
+             </p>
         </div>
 
         <div class="subscribe-area">
@@ -27,7 +29,7 @@
             <ul>
                 <?php foreach($this->allCategories as $category){
                     ?>
-                    <li><a href="#"><?= $category->getLibelle() ?></a></li>
+                    <li><a href="index.php?action=articlesByCategory&category=<?= $category->getId()?>"><?= $category->getLibelle() ?></a></li>
                 <?php } ?>
             </ul>
 
