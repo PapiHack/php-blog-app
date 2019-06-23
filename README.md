@@ -21,7 +21,7 @@ Il contient l'entiereté de l'application, en d'autres termes tout le code sourc
 - `Data` contient tout ce qui données en quelque sorte. En l'occurence ici il ne contient qu'une classe représentant une connexion à votre BD.
 Attention : J'y implémente le `pattern singleton`.  
 
-- `Core` contient le '`core framework`' en quelque sorte. `Helpers` contient des helpers que j'ai codé afin de me faciliter le rendu des fichiers statiques
+- `Core` contient ce qu'on appelle du `core framework` plus précisément un ensemble d'utilitaires indispensables et facilitant le bon fonctionnement de l'app. `Helpers` contient des helpers que j'ai codé afin de me faciliter le rendu des fichiers statiques
 
 - `Enity` contient les entités (objets métier).  
 
