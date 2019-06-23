@@ -79,4 +79,11 @@ class CategorieManager
         ]);
     }
 
+    public function is_exist($libelle)
+    {
+        $request = $this->db->prepare('SELECT * FROM categorie WHERE libelle = :libelle');
+        $request->execute(['libelle' => $libelle]);
+        return count($request->fetchAll());
+    }
+
 }

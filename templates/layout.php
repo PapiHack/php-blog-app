@@ -16,6 +16,7 @@
 	<link href="<?= asset('common-css/ionicons.css') ?>" rel="stylesheet">
 	<link href="<?= asset('blog-sidebar/css/styles.css') ?>" rel="stylesheet">
 	<link href="<?= asset('blog-sidebar/css/responsive.css') ?>" rel="stylesheet">
+	<link href="<?= asset('font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
 </head>
 <body>
 

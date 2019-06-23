@@ -33,13 +33,12 @@ class CommentaireManager
     public function add(Commentaire $commentaire)
     {
         $request = $this->db->prepare('INSERT INTO commentaire (contenu, article, auteur, date) 
-                            VALUES(:contenu, :article, :auteur, :date)');
+                            VALUES(:contenu, :article, :auteur, NOW())');
         
         return $request->execute([
             'contenu' => $commentaire->getContenu(),
-            'article' => $commentaire->getArticle()->getId(),
-            'auteur'  => $commentaire->getAuteur()->getId(),
-            'date'    => $commentaire->getDate()
+            'article' => $commentaire->getArticle(),
+            'auteur'  => $commentaire->getAuteur(),
         ]);
     }
 

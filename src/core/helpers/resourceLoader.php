@@ -19,9 +19,14 @@ define('BASE_DIR', substr(dirname(__DIR__, 3), strlen(dirname(__DIR__, 3))-7));
  *
  * @param   String  $file  ressource demandée
  *
- * @return  path         [chemin de la ressource demandée
+ * @return  path         chemin de la ressource demandée
  */
 function asset($file)
 {
     return '/'.BASE_DIR.'/public/assets/'.$file;
+}
+
+function assetUpload($file)
+{
+    return '/'.BASE_DIR.'/public/uploads/'.$file;
 }

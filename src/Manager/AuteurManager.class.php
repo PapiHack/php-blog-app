@@ -84,4 +84,28 @@ class AuteurManager
             'id'     => $auteur->getId()
         ]);
     }
+
+    public function pseudo_exist($pseudo)
+    {
+        $request = $this->db->prepare('SELECT * FROM auteur WHERE pseudo = :pseudo');
+        $request->execute(['pseudo' => $pseudo]);
+        return count($request->fetchAll());
+    }
+
+    public function mail_exist($mail)
+    {
+        $request = $this->db->prepare('SELECT * FROM auteur WHERE mail = :mail');
+        $request->execute(['mail' => $mail]);
+        return count($request->fetchAll());
+    }
+
+    public function getByPseudo($pseudo)
+    {
+
+        $request = $this->db->prepare('SELECT * FROM auteur WHERE pseudo = :pseudo');
+        $request->execute(['pseudo' => $pseudo]);
+        $data = $request->fetch(PDO::FETCH_ASSOC);
+
+        return new Auteur($data);
+    }
 }

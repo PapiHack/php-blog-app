@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../config/database.php');
+require_once('../config/database.php');
 
 /**
  * 
@@ -16,6 +16,11 @@ class Connexion
 {
     private static $connexion;
 
+    /**
+     * Initialise la connexion à la BD avec les paramètres définis dans la configuration.
+     *
+     * @return  Void  Nothing
+     */
     private function __construct()
     {
         try 
@@ -28,10 +33,15 @@ class Connexion
             die();
         }
     }
-
+    
+    /**
+     * Méthode retournant une instance de la connexion à la BD
+     *
+     * @return  Connexion  l'objet connexion
+     */
     public static function getConnexion()
     {
-        if($connexion === null)
+        if(self::$connexion === null)
             self::$connexion == new Connexion;
         return self::$connexion;
     }

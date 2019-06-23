@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Utilities/HydratationTrait.php');
+require_once('../src/Utilities/HydratationTrait.php');
 
 /**
  * 
@@ -18,7 +18,7 @@ class Categorie
     private $id;
     private $libelle;
 
-    public function __construc(Array $data)
+    public function __construct(Array $data)
     {
         $this->hydrate($data);
     }

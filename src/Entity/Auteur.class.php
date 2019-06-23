@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Utilities/HydratationTrait.php');
+require_once('../src/Utilities/HydratationTrait.php');
 
 /**
  * 
